@@ -2196,17 +2196,17 @@ class TiltShaderLoader extends Loader {
     constructor( manager ) {
         super( manager );
     }
-    
+
     async load(brushName, onLoad, onProgress, onError ) {
         const scope = this;
 
         const isAlreadyLoaded = loadedMaterials[brushName];
-        
+
         if (isAlreadyLoaded !== undefined) {
             onLoad( scope.parse( isAlreadyLoaded ) );
             return;
         }
-        
+
 		const loader = new FileLoader( this.manager );
 		loader.setPath( this.path );
 		loader.setResponseType( 'text' );
@@ -2343,7 +2343,14 @@ const tiltBrushMaterialParams = {
         depthFunc: 2,
         depthWrite: false,
         depthTest: true,
-        blending: 2
+        blending: 5,
+        blendDstAlpha: 201,
+        blendDst: 201,
+        blendEquationAlpha: 100,
+        blendEquation: 100,
+        blendSrcAlpha: 202,
+        blendSrc: 202,
+        alphaTest: 0.01,
     },
     "CelVinyl" : {
         uniforms: {
@@ -2384,8 +2391,9 @@ const tiltBrushMaterialParams = {
         blendDst: 201,
         blendEquationAlpha: 100,
         blendEquation: 100,
-        blendSrcAlpha: 201,
-        blendSrc: 201
+        blendSrcAlpha: 202,
+        blendSrc: 202,
+        alphaTest: 0.01,
     },
     "CoarseBristles" : {
         uniforms: {
@@ -2428,7 +2436,14 @@ const tiltBrushMaterialParams = {
         depthFunc: 2,
         depthWrite: false,
         depthTest: true,
-        blending: 2
+        blending: 5,
+        blendDstAlpha: 201,
+        blendDst: 201,
+        blendEquationAlpha: 100,
+        blendEquation: 100,
+        blendSrcAlpha: 202,
+        blendSrc: 202,
+        alphaTest: 0.01,
     },
     "DiamondHull" : {
         uniforms: {
@@ -2455,8 +2470,9 @@ const tiltBrushMaterialParams = {
         blendDst: 201,
         blendEquationAlpha: 100,
         blendEquation: 100,
-        blendSrcAlpha: 201,
-        blendSrc: 201,
+        blendSrcAlpha: 202,
+        blendSrc: 202,
+        alphaTest: 0.01,
     },
     "Disco" : {
         uniforms: {
@@ -2496,7 +2512,7 @@ const tiltBrushMaterialParams = {
         depthWrite: true,
         depthTest: true,
         blending: 0,
-        
+
     },
     "Dots" : {
         uniforms: {
@@ -2514,7 +2530,14 @@ const tiltBrushMaterialParams = {
         depthFunc: 2,
         depthWrite: false,
         depthTest: true,
-        blending: 2
+        blending: 5,
+        blendDstAlpha: 201,
+        blendDst: 201,
+        blendEquationAlpha: 100,
+        blendEquation: 100,
+        blendSrcAlpha: 202,
+        blendSrc: 202,
+        alphaTest: 0.01,
     },
     "DoubleTaperedFlat" : {
         uniforms: {
@@ -2591,7 +2614,14 @@ const tiltBrushMaterialParams = {
         depthFunc: 2,
         depthWrite: false,
         depthTest: true,
-        blending: 2
+        blending: 5,
+        blendDstAlpha: 201,
+        blendDst: 201,
+        blendEquationAlpha: 100,
+        blendEquation: 100,
+        blendSrcAlpha: 202,
+        blendSrc: 202,
+        alphaTest: 0.01,
     },
     "Embers" : {
         uniforms: {
@@ -2611,7 +2641,14 @@ const tiltBrushMaterialParams = {
         depthFunc: 2,
         depthWrite: false,
         depthTest: true,
-        blending: 2
+        blending: 5,
+        blendDstAlpha: 201,
+        blendDst: 201,
+        blendEquationAlpha: 100,
+        blendEquation: 100,
+        blendSrcAlpha: 202,
+        blendSrc: 202,
+        alphaTest: 0.01,
     },
     "EnvironmentDiffuse" : {
         uniforms: {
@@ -2672,13 +2709,7 @@ const tiltBrushMaterialParams = {
         depthFunc: 2,
         depthWrite: false,
         depthTest: true,
-        blending: 5,
-        blendDstAlpha: 201,
-        blendDst: 201,
-        blendEquationAlpha: 100,
-        blendEquation: 100,
-        blendSrcAlpha: 201,
-        blendSrc: 201
+        blending: 2
     },
     "Flat" : {
         uniforms: {
@@ -2698,13 +2729,7 @@ const tiltBrushMaterialParams = {
         depthFunc: 2,
         depthWrite: true,
         depthTest: true,
-        blending: 5,
-        blendDstAlpha: 201,
-        blendDst: 201,
-        blendEquationAlpha: 100,
-        blendEquation: 100,
-        blendSrcAlpha: 201,
-        blendSrc: 201,
+        blending: 0
     },
     "Highlighter" : {
         uniforms: {
@@ -2720,7 +2745,14 @@ const tiltBrushMaterialParams = {
         depthFunc: 2,
         depthWrite: false,
         depthTest: true,
-        blending: 2
+        blending: 5,
+        blendDstAlpha: 201,
+        blendDst: 201,
+        blendEquationAlpha: 100,
+        blendEquation: 100,
+        blendSrcAlpha: 202,
+        blendSrc: 202,
+        alphaTest: 0.01,
     },
     "Hypercolor" : {
         uniforms: {
@@ -2762,7 +2794,14 @@ const tiltBrushMaterialParams = {
         depthFunc: 2,
         depthWrite: false,
         depthTest: true,
-        blending: 2
+        blending: 5,
+        blendDstAlpha: 201,
+        blendDst: 201,
+        blendEquationAlpha: 100,
+        blendEquation: 100,
+        blendSrcAlpha: 202,
+        blendSrc: 202,
+        alphaTest: 0.01,
     },
     "Icing" : {
         uniforms: {
@@ -2858,8 +2897,9 @@ const tiltBrushMaterialParams = {
         blendDst: 201,
         blendEquationAlpha: 100,
         blendEquation: 100,
-        blendSrcAlpha: 201,
-        blendSrc: 201,
+        blendSrcAlpha: 202,
+        blendSrc: 202,
+        alphaTest: 0.01,
     },
     "LightWire" : {
         uniforms: {
@@ -2919,7 +2959,7 @@ const tiltBrushMaterialParams = {
         depthWrite: true,
         depthTest: true,
         blending: 0,
-        
+
     },
     "MatteHull" : {
         uniforms: {
@@ -2961,8 +3001,9 @@ const tiltBrushMaterialParams = {
         blendDst: 201,
         blendEquationAlpha: 100,
         blendEquation: 100,
-        blendSrcAlpha: 201,
-        blendSrc: 201,
+        blendSrcAlpha: 202,
+        blendSrc: 202,
+        alphaTest: 0.01,
     },
     "OilPaint": {
         uniforms: {
@@ -3062,7 +3103,7 @@ const tiltBrushMaterialParams = {
         uniforms: {
             u_SceneLight_0_matrix: { value: [0.2931, 0.5524, -0.7803, 0, -0.8769, 0.4805, 0.0107, 0, 0.3809, 0.6811, 0.6253, 0, -4.9937, 8.1874, -46.2828, 1] },
             u_SceneLight_1_matrix: { value: [0.1816, -0.1369, -0.9738, 0, -0.7915, -0.6080, -0.0621, 0, -0.5835, 0.7821, -0.2188, 0, -5.6205, 8.2530, -46.8315, 1] },
-            u_ambient_light_color: { value: new Vector4(0.3922, 0.3922, 0.3922, 1) },
+            u_ambient_light_color: { value: new Vector4(0.8888, 0.8888, 0.8888, 1) },
             u_SceneLight_0_color: { value: new Vector4(0.7780, 0.8157, 0.9914, 1) },
             u_SceneLight_1_color: { value: new Vector4(0.4282, 0.4212, 0.3459, 1) },
             u_SpecColor: { value: new Vector3(0, 0, 0) },
@@ -3115,8 +3156,9 @@ const tiltBrushMaterialParams = {
         blendDst: 201,
         blendEquationAlpha: 100,
         blendEquation: 100,
-        blendSrcAlpha: 201,
-        blendSrc: 201,
+        blendSrcAlpha: 202,
+        blendSrc: 202,
+        alphaTest: 0.01,
     },
     "ShinyHull" : {
         uniforms: {
@@ -3154,7 +3196,14 @@ const tiltBrushMaterialParams = {
         depthFunc: 2,
         depthWrite: false,
         depthTest: true,
-        blending: 2
+        blending: 5,
+        blendDstAlpha: 201,
+        blendDst: 201,
+        blendEquationAlpha: 100,
+        blendEquation: 100,
+        blendSrcAlpha: 201,
+        blendSrc: 201,
+        alphaTest: 0.01,
     },
     "Snow" : {
         uniforms: {
@@ -3173,7 +3222,14 @@ const tiltBrushMaterialParams = {
         depthFunc: 2,
         depthWrite: false,
         depthTest: true,
-        blending: 2
+        blending: 5,
+        blendDstAlpha: 201,
+        blendDst: 201,
+        blendEquationAlpha: 100,
+        blendEquation: 100,
+        blendSrcAlpha: 202,
+        blendSrc: 202,
+        alphaTest: 0.01,
     },
     "SoftHighlighter" : {
         uniforms: {
@@ -3193,8 +3249,9 @@ const tiltBrushMaterialParams = {
         blendDst: 201,
         blendEquationAlpha: 100,
         blendEquation: 100,
-        blendSrcAlpha: 201,
-        blendSrc: 201,
+        blendSrcAlpha: 202,
+        blendSrc: 202,
+        alphaTest: 0.01,
     },
     "Spikes" : {
         uniforms: {
@@ -3251,7 +3308,14 @@ const tiltBrushMaterialParams = {
         depthFunc: 2,
         depthWrite: false,
         depthTest: true,
-        blending: 2
+        blending: 5,
+        blendDstAlpha: 201,
+        blendDst: 201,
+        blendEquationAlpha: 100,
+        blendEquation: 100,
+        blendSrcAlpha: 202,
+        blendSrc: 202,
+        alphaTest: 0.01,
     },
     "Streamers" : {
         uniforms: {
@@ -3268,7 +3332,14 @@ const tiltBrushMaterialParams = {
         depthFunc: 2,
         depthWrite: false,
         depthTest: true,
-        blending: 2
+        blending: 5,
+        blendDstAlpha: 201,
+        blendDst: 201,
+        blendEquationAlpha: 100,
+        blendEquation: 100,
+        blendSrcAlpha: 202,
+        blendSrc: 202,
+        alphaTest: 0.01,
     },
     "Taffy" : {
         uniforms: {
@@ -3484,7 +3555,7 @@ const tiltBrushMaterialParams = {
         depthFunc: 2,
         depthWrite: true,
         depthTest: true,
-        blending: 0
+        blending: 2
     },
     "Wire" : {
         uniforms: {

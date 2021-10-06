@@ -17,7 +17,8 @@ import {
     Mesh,
     RawShaderMaterial,
     Vector3,
-    Vector4
+    Vector4,
+    CustomBlending,
 } from 'three';
 
 export function updateBrushes(updateableMeshes : Mesh[], elapsedTime : number, cameraPosition : Vector3) {

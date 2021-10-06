@@ -20,15 +20,15 @@
 precision mediump float;
 
 out vec4 fragColor;
-  
-uniform sampler2D u_MainTex;
-uniform vec4 u_time; 
 
-in vec4 v_color; 
+uniform sampler2D u_MainTex;
+uniform vec4 u_time;
+
+in vec4 v_color;
 in vec2 v_texcoord0;
 
 void main() {
- 
+
   // Tuning constants for 3 lines
   vec3 A     = vec3(0.55, 0.3, 0.7 );
   vec3 aRate = vec3(1.2 , 1.0, 1.33);
@@ -39,7 +39,7 @@ void main() {
 
   // Calculate uvs for each line
   vec3 us, vs;
-  { 
+  {
     us = A * v_texcoord0.x - aRate * u_time.y;
 
     vec3 tmp = M*A * v_texcoord0.x - bRate * u_time.y;
@@ -58,7 +58,7 @@ void main() {
 
   // adjust brightness; modulate by color
   tex.rgb *= .8 * (1. + 30. * pow((vec3(1.,1,.1) - vec3(v_color.a,v_color.a,v_color.a)), vec3(5.,5.,5.)));
-  tex *= v_color;				
+  tex *= v_color;
 
-  fragColor = vec4(tex.rgb * tex.a, 1.0);
+  fragColor = vec4(tex.rgb * tex.a, 0.0);
 }

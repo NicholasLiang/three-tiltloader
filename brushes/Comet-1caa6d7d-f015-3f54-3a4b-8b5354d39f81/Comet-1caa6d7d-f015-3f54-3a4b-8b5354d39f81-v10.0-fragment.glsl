@@ -49,7 +49,7 @@ void main() {
   // Combine all channels
   float gradient_lookup_value = (r + g + b) / 3.0;
   // Rescales the lookup value from start to finish.
-  gradient_lookup_value *= (1.0 - v_texcoord0.x); 
+  gradient_lookup_value *= (1.0 - v_texcoord0.x);
   gradient_lookup_value = (pow(gradient_lookup_value, 2.0) + 0.125) * 3.0;
 
   float falloff = max((0.2 - v_texcoord0.x) * 5.0, 0.0);
@@ -60,6 +60,5 @@ void main() {
   vec4 tex = texture(u_AlphaMask, vec2(u, 0.0));
 
   fragColor.rgb = (tex * v_color).rgb;
-  fragColor.a = 1.0;
+  fragColor.a = 0.05;
 }
-

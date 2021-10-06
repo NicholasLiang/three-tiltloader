@@ -31,5 +31,5 @@ void main() {
   c.rgb += c.rgb * c.a * u_EmissionGain;
 
   fragColor.rgb = c.rgb;
-  fragColor.a = 1.0;
+  fragColor.a = 0.0;
 }

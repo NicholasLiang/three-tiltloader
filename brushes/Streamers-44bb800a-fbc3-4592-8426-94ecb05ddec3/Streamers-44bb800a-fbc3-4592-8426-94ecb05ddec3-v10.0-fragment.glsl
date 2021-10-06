@@ -58,6 +58,6 @@ void main() {
 	tex *= 1.0 - mod(uvs.y,1.0); // bottom edg
 
 	vec4 color = v_color * tex * exp(u_EmissionGain * 5.0);
-	fragColor = vec4(color.rgb * color.a,1.0);
+	fragColor = vec4(color.rgb * color.a, 0.0);
 
 }

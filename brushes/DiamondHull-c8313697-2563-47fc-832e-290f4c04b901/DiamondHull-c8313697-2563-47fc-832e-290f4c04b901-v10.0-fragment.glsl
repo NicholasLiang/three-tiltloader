@@ -424,7 +424,7 @@ vec3 GetDiffraction(vec3 thickTex, vec3 I, vec3 N) {
   const float nmedium = 1.0;
   const float nfilm = 1.3;
   const float ninternal = 1.0;
-  
+
   float cos0 = abs(dot(I, N));
 
   float t = (thickTex[0] + thickTex[1] + thickTex[2]) / 3.0;
@@ -476,6 +476,5 @@ void main() {
   vec3 specColor = v_color.rgb * clamp(diffraction, 0.0, 1.0);
 
   fragColor.rgb = computeLighting(v_normal, albedo, specColor, shininess) + emission;
-  fragColor.a = 1.0;
+  fragColor.a = 0.0;
 }
-

@@ -46,14 +46,14 @@ void main() {
 	vec4 unbloomedColor = v_color;
 	vec4 bloomedColor = bloomColor(v_color, u_EmissionGain);
 	vec2 texcoord = v_texcoord0.xy;
-	
+
 	float envelope = sin(texcoord.x * 3.14159);
 	texcoord.y += texcoord.x * 3.0;
 
 	float waveform_r = .15 * sin( -20.0 * unbloomedColor.r * u_time.w + texcoord.x * 100.0 * unbloomedColor.r);
 	float waveform_g = .15 * sin( -30.0 * unbloomedColor.g * u_time.w + texcoord.x * 100.0 * unbloomedColor.g);
 	float waveform_b = .15 * sin( -40.0 * unbloomedColor.b * u_time.w + texcoord.x * 100.0 * unbloomedColor.b);
-				   
+
 	texcoord.y = mod(texcoord.y + texcoord.x, 1.0);
 	texcoord.y = mod(texcoord.y + texcoord.x, 1.0);
 
@@ -65,5 +65,5 @@ void main() {
 	color.w = 1.0;
 	color = bloomedColor * color;
 
-    fragColor = vec4(color.rgb * color.a, 1.0);
+    fragColor = vec4(color.rgb * color.a, 0.0);
 }

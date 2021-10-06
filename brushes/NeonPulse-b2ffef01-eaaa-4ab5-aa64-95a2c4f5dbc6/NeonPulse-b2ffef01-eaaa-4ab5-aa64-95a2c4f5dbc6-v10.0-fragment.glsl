@@ -262,6 +262,6 @@ void main() {
   bloom *= NdotV;
 
   fragColor.rgb += neon * bloom.rgb;
-  fragColor.a = 1.0;
+  fragColor.a = 0.05;
 
 }

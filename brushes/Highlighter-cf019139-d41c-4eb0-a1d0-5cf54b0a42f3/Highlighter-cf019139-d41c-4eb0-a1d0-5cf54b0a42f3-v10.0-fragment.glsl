@@ -33,7 +33,7 @@ void main() {
   brush_mask *= v_color.a;
   if (brush_mask > u_Cutoff) {
     fragColor.rgb = v_color.rgb;
-    fragColor.a = 1.0;
+    fragColor.a = 0.0;
   } else {
     discard;
   }

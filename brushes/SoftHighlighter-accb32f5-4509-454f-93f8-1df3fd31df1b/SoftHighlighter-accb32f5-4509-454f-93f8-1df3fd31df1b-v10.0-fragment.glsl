@@ -30,5 +30,5 @@ uniform sampler2D u_MainTex;
 void main() {
   float brush_mask = texture(u_MainTex, v_texcoord0).w;
     fragColor.rgb = brush_mask * v_color.rgb;
-    fragColor.a = 1.0;
+    fragColor.a = 0.0;
 }

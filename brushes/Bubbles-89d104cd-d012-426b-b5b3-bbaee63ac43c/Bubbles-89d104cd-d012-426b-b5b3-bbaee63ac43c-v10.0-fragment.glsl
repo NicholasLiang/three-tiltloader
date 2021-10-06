@@ -25,10 +25,10 @@ uniform sampler2D u_MainTex;
 void main() {
   vec4 tex = texture(u_MainTex, v_texcoord0);
   vec3 basecolor = v_color.rgb * tex.rgb;
-  				
+
   // Alpha channel of the texture is not affected by color.  It is the fake "highlight" bubble effect.
   vec3 highlightcolor = tex.aaa;
 
   fragColor.rgb = basecolor + highlightcolor;
-  fragColor.a = 1.0;
+  fragColor.a = 0.0;
 }

@@ -372,6 +372,8 @@ void main() {
 	  discard;
   }
 
-  fragColor.rgb = ApplyFog(computeLighting(v_normal, specColor, shininess));
-  fragColor.a = 1.0;
+  // fragColor.rgb = computeLighting(v_normal, specColor, shininess);
+  // fragColor.a = 1.0;
+
+  fragColor = v_color;
 }

@@ -27,5 +27,5 @@ uniform float u_EmissionGain;
 void main() {
 
   vec4 color = v_color * texture(u_MainTex, v_texcoord0);
-  fragColor = vec4(color.rgb * color.a, 1.0);
+  fragColor = vec4(color.rgb * color.a, 0.0);
 }

@@ -71,5 +71,5 @@ vec3 ApplyFog(vec3 color) {
 
 void main() {
     fragColor.rgb = ApplyFog(v_color.rgb);
-    fragColor.a = 1.0;
+    fragColor.a = 0.0;
 }
